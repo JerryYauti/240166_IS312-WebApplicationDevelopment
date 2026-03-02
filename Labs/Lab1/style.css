@@ -1,0 +1,95 @@
+/* Author: Jerry
+   Date: 01 March 2024
+   Description: CSS Grid Layout for Diwai Bank Ltd sample webpage
+*/
+
+/* Reset */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f9f9f9;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    grid-template-rows: auto 50px 1fr auto;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    background-color:green; /* Green header */
+    color:black;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation Menu */
+.nav {
+    grid-area: nav;
+    background-color: yellow; /* Yellow navigation */
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+}
+.nav ul li {
+    margin: 0 15px;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: blue;
+    
+}
+.nav ul li a:hover {
+    color: darkgreen;
+}
+
+/* Main Content */
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5px;
+    padding: 20px;
+}
+.transfer h2, .dashboard h2 {
+    color: black;
+    margin-bottom: 15px;
+}
+.transfer ul {
+    list-style: none;
+}
+.transfer ul li {
+    margin-bottom: 8px;
+}
+.transfer ul li a {
+    text-decoration: none;
+    color: darkblue;
+}
+.transfer ul li a:hover {
+    color: darkgreen;
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: gainsboro;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
