@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Program</title>
+    <script>
+        // Validate that all fields are filled 
+        function validate() {
+            var code = document.forms["progForm"]["p_code"].value;
+            var name = document.forms["progForm"]["p_name"].value;
+            if (code == "" || name == "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>New Program Entry</h2>
+    <form name="progForm" action="add-new-program.php" method="POST" onsubmit="return validate()">
+        Program Code: <input type="text" name="p_code"><br><br>
+        Program Name: <input type="text" name="p_name"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
