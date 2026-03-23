@@ -1,0 +1,23 @@
+
+<!--Name:Jerry Yauti-->
+<!--Date: 23/03/2026-->
+<html>
+<script>
+function validateForm() {
+    let x = document.forms["progForm"]["pCode"].value;
+    let y = document.forms["progForm"]["pName"].value;
+    if (x == "" || y == "") {
+        alert("All fields must be filled out");
+        return false;
+    }
+}
+</script>
+<body>
+    <form name="progForm" action="add-new-program.php" onsubmit="return validateForm()" method="post">
+        Program Code: <input type="text" name="pCode"><br>
+        Program Name: <input type="text" name="pName"><br>
+        Department: <input type="text" name="pDept"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
